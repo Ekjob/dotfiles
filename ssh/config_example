@@ -1,0 +1,17 @@
+# Global options below
+# Remove comments
+# Add host with specific options, see example 
+Host *
+        ConnectTimeout 10
+        ConnectionAttempts 10
+        ServerAliveInterval 300
+        ServerAliveCountMax 2
+        ForwardAgent  no
+	PubkeyAcceptedKeyTypes +ssh-rsa
+
+Host <HOSTNAME>
+	LogLevel quiet
+	Hostname <HOSTNAME>
+	User <USERNAME>
+	IdentityFile <PATH_TO_SSH_KEY_FILE>
+	IdentitiesOnly yes
